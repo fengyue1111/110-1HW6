@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reg.aspx.cs" Inherits="_110_1HW6.Reg" %>
+﻿   
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reg.aspx.cs" Inherits="_110_1HW6.Reg" %>
 
 <!DOCTYPE html>
 
@@ -9,8 +10,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-        </div>
+           <asp:TextBox ID="tb_CTEL" runat="server"></asp:TextBox>
+        <asp:RegularExpressionValidator ID="rev_CTEL" runat="server" ErrorMessage="不符合格式" ForeColor="Maroon" ControlToValidate="tb_CTEL" ValidationExpression="^cd[bc]*a[bc]*e[abc]*d*[abc]*cb$"></asp:RegularExpressionValidator><br />
+        <asp:Button ID="btn_Subnit" runat="server" Text="送出" /> <br />
+        <asp:Label ID="lb_Msg" runat="server" Text=""></asp:Label>
     </form>
 </body>
 </html>
